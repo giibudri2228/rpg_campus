@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,14 +9,15 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('RPG Campus'),
+        backgroundColor: Theme.of(context).colorScheme.primary,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
+            Text(
               'Bem-vindo, aventureiro!',
-              style: TextStyle(
+              style: GoogleFonts.cinzel(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
@@ -26,6 +28,11 @@ class HomeScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {},
               child: const Text('Comecar aventura'),
+            ),
+            const SizedBox(height: 12),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text('Sobre o jogo'),
             ),
           ],
         ),
